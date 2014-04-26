@@ -30,3 +30,4 @@ filetype plugin indent on    " required
 
 syntax on
 set autoindent
+set number
