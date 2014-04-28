@@ -31,3 +31,6 @@ filetype plugin indent on    " required
 syntax on
 set autoindent
 set number
+
+map <C-n> <Esc>:tabprev<CR>
+map <C-m> <Esc>:tabnext<CR>
