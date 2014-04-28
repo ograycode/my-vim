@@ -28,9 +28,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"Turn on syntax highlighting
 syntax on
+
+"Setup indentation
 set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+"Turn on line numbers
 set number
 
+"Make ctrl+n and ctrl+m change tabs
 map <C-n> <Esc>:tabprev<CR>
 map <C-m> <Esc>:tabnext<CR>
