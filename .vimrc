@@ -41,6 +41,9 @@ set smarttab
 "Turn on line numbers
 set number
 
+"Turn on auto reload, sortof. Still need to do a :checktime for it to work
+set autoread
+
 "Make ctrl+n and ctrl+m change tabs
-map <C-n> <Esc>:tabprev<CR>
-map <C-m> <Esc>:tabnext<CR>
+map <C-n> :tabprev<CR>
+map <C-m> :tabnext<CR>
