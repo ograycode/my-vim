@@ -33,6 +33,7 @@ syntax on
 
 "Setup indentation
 set autoindent
+"Default to two space tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -43,6 +44,9 @@ set number
 
 "Turn on auto reload, sortof. Still need to do a :checktime for it to work
 set autoread
+
+"Python uses four spaces tabs
+au FileType python setl shiftwidth=4 expandtab
 
 "Make ctrl+n and ctrl+m change tabs
 map <C-n> :tabprev<CR>
