@@ -41,6 +41,9 @@ set smarttab
 
 "Turn on line numbers
 set number
+" Set to light gray,
+" http://guns.github.io/xterm-color-table.vim/images/xterm-color-table.png
+highlight LineNr ctermfg=8
 
 "Turn on auto reload, sortof. Still need to do a :checktime for it to work
 set autoread
