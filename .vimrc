@@ -39,6 +39,9 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
+"Cursor line
+set cursorline
+
 "Turn on line numbers
 set number
 " Set to light gray,
