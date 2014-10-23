@@ -12,6 +12,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'https://github.com/genoma/vim-less.git'
 Plugin 'https://github.com/kchmck/vim-coffee-script.git'
+Plugin 'https://github.com/fatih/vim-go.git'
+Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
