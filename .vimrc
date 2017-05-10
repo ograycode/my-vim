@@ -1,34 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'https://github.com/genoma/vim-less.git'
-Plugin 'https://github.com/kchmck/vim-coffee-script.git'
-Plugin 'https://github.com/fatih/vim-go.git'
-Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 "Turn on syntax highlighting
 syntax on
@@ -48,10 +17,17 @@ set cursorline
 set number
 " Set to light gray,
 " http://guns.github.io/xterm-color-table.vim/images/xterm-color-table.png
-highlight LineNr ctermfg=8
+highlight LineNr term=bold cterm=None ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 "Turn on auto reload, sortof. Still need to do a :checktime for it to work
 set autoread
+
+"More of a sane backspace
+set backspace=indent,eol,start
+
+"Cmd settings
+set wildmenu
+set showcmd
 
 "Python uses four spaces tabs
 au FileType python setl shiftwidth=4 expandtab
