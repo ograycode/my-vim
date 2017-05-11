@@ -15,9 +15,6 @@ set cursorline
 
 "Turn on line numbers
 set number
-" Set to light gray,
-" http://guns.github.io/xterm-color-table.vim/images/xterm-color-table.png
-highlight LineNr term=bold cterm=None ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 "Turn on auto reload, sortof. Still need to do a :checktime for it to work
 set autoread
@@ -38,8 +35,6 @@ map <C-m> :tabnext<CR>
 
 "Fold
 set foldmethod=syntax
-"Fold coloring
-highlight Folded ctermbg=black
 
 "Reload vimrc automatically
 "From http://stackoverflow.com/a/2403926
@@ -47,3 +42,7 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
+" use dark gruvbox theme
+color gruvbox
+set background=dark
