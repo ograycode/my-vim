@@ -35,3 +35,8 @@ au FileType python setl shiftwidth=4 expandtab
 "Make ctrl+n and ctrl+m change tabs
 map <C-n> :tabprev<CR>
 map <C-m> :tabnext<CR>
+
+"Fold
+set foldmethod=syntax
+"Fold coloring
+highlight Folded ctermbg=black
