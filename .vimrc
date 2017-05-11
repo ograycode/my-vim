@@ -1,3 +1,8 @@
+"Plugin loading with pathogen
+execute pathogen#infect()
+
+"Generate helptags for airline
+Helptags
 
 "Turn on syntax highlighting
 syntax on
