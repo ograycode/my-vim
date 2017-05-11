@@ -40,3 +40,10 @@ map <C-m> :tabnext<CR>
 set foldmethod=syntax
 "Fold coloring
 highlight Folded ctermbg=black
+
+"Reload vimrc automatically
+"From http://stackoverflow.com/a/2403926
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
