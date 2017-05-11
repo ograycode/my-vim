@@ -1,7 +1,12 @@
 def install_plugin https_url
   name = https_url.split('/').last
-  puts "Installing #{name}"
-  %x{ if ! cd ~/.vim/bundle/#{name}; then git clone -q #{https_url} ~/.vim/bundle/#{name}; fi }
+  location = "#{ENV['HOME']}/.vim/bundle#{name}"
+  if Dir.exists? location
+    puts "#{name} is already installed"
+  else
+    puts "Installing #{name}"
+    %x{ git clone -q #{https_url} #{location} }
+  end
 end
 
 puts "Setup .vimrc"
@@ -12,3 +17,5 @@ puts "Installing vim-pathogen"
 
 install_plugin "https://github.com/vim-airline/vim-airline"
 install_plugin "https://github.com/morhetz/gruvbox"
+install_plugin "https://github.com/tpope/vim-sensible"
+install_plugin "https://github.com/vim-airline/vim-airline-themes"
