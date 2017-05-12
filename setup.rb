@@ -1,6 +1,6 @@
 def install_plugin https_url
   name = https_url.split('/').last
-  location = "#{ENV['HOME']}/.vim/bundle#{name}"
+  location = "#{ENV['HOME']}/.vim/bundle/#{name}"
   if Dir.exists? location
     puts "#{name} is already installed"
   else
