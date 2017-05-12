@@ -9,6 +9,20 @@ def install_plugin https_url
   end
 end
 
+def install_powerline_fonts
+  if File.exists? "fonts_installed"
+    puts "Skipping font installation"
+  else
+    puts "Installing fonts"
+    %x(git clone https://github.com/powerline/fonts.git &&
+       cd fonts &&
+       ./install.sh &&
+       cd .. &&
+       rm -rf fonts &&
+       touch fonts_installed)
+  end
+end
+
 puts "Setup .vimrc"
 %x{ ln -s -i $PWD/.vimrc ~/.vimrc }
 
@@ -19,3 +33,5 @@ install_plugin "https://github.com/vim-airline/vim-airline"
 install_plugin "https://github.com/morhetz/gruvbox"
 install_plugin "https://github.com/tpope/vim-sensible"
 install_plugin "https://github.com/vim-airline/vim-airline-themes"
+
+install_powerline_fonts
