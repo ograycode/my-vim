@@ -34,5 +34,7 @@ install_plugin "https://github.com/morhetz/gruvbox"
 install_plugin "https://github.com/tpope/vim-sensible"
 install_plugin "https://github.com/vim-airline/vim-airline-themes"
 install_plugin "https://github.com/tmhedberg/SimpylFold"
+install_plugin "https://github.com/scrooloose/nerdtree"
+install_plugin "https://github.com/kien/ctrlp.vim"
 
 install_powerline_fonts
