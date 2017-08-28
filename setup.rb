@@ -36,5 +36,6 @@ install_plugin "https://github.com/vim-airline/vim-airline-themes"
 install_plugin "https://github.com/tmhedberg/SimpylFold"
 install_plugin "https://github.com/scrooloose/nerdtree"
 install_plugin "https://github.com/kien/ctrlp.vim"
+install_plugin "https://github.com/elixir-editors/vim-elixir"
 
 install_powerline_fonts
